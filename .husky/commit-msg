@@ -1,0 +1,7 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '	:: Commit messages not setup with Husky!'
+echo '	:: Set commit messages by editing .husky/commit-msg'
+cd server
+yarn test

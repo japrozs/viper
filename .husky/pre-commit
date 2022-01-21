@@ -1,0 +1,7 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '	:: Testing not setup with Husky!'
+echo '	:: Set pre-commit commands by editing .husky/pre-commit'
+cd server
+yarn test

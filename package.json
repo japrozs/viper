@@ -7,7 +7,8 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "watch": "tsc -w",
         "dev": "node dist/main.js",
-        "build": "tsc"
+        "build": "tsc",
+        "prepare": "husky install"
     },
     "keywords": [],
     "author": "",
@@ -15,6 +16,7 @@
     "devDependencies": {
         "@types/node": "^17.0.10",
         "@types/readline-sync": "^1.4.4",
+        "husky": "^7.0.4",
         "typescript": "^4.5.5"
     },
     "dependencies": {
