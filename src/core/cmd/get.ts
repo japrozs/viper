@@ -11,7 +11,7 @@ export const get = (stmt: Statement) => {
         error(ErrorType.WRONG_ARGS, stmt);
         return;
     }
-    const obj = yaml.parse(code);
+    const obj = yaml.parse(code) || {};
     const arr = stmt.statement.split(" ");
     const key = arr[1];
     const val = obj[key];

@@ -10,11 +10,12 @@ You can interact with Viper through its `REPL` using commands. The commands are 
 
 -   [x] `SET`
 -   [x] `GET`
--   [ ] `UPDATE`
+-   [x] `UPDATE`
 -   [ ] `CLEAR`
+-   [x] `HELP`
 -   [x] `EXIT`
 -   [ ] `AUTH`
--   [ ] `INFO`
+-   [x] `INFO`
 -   [x] `LIST`
 -   [ ] `GETUSER`
 -   [ ] `WHOAMI`

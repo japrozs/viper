@@ -11,6 +11,7 @@ export enum Command {
     INFO = "INFO",
     LIST = "LIST",
     GETUSER = "GETUSER",
+    HELP = "HELP",
     WHOAMI = "WHOAMI",
     UNKNOWN = "UNKNOWN",
 }
@@ -36,6 +37,9 @@ export const parse = (stmt: string) => {
             break;
         case "delete":
             commandType = Command.DELETE;
+            break;
+        case "help":
+            commandType = Command.HELP;
             break;
         case "list":
             commandType = Command.LIST;

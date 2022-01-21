@@ -1,7 +1,10 @@
+import { info } from "console";
 import { error, ErrorType } from "../utils/error";
 import { get } from "./cmd/get";
+import { help } from "./cmd/help";
 import { list } from "./cmd/list";
 import { set } from "./cmd/set";
+import { update } from "./cmd/update";
 import { Command, Statement } from "./parse";
 
 export const exec = (stmt: Statement) => {
@@ -13,6 +16,7 @@ export const exec = (stmt: Statement) => {
             get(stmt);
             break;
         case Command.UPDATE:
+            update(stmt);
             break;
         case Command.DELETE:
             break;
@@ -21,6 +25,9 @@ export const exec = (stmt: Statement) => {
             break;
         case Command.CLEAR:
             break;
+        case Command.HELP:
+            help(stmt);
+            break;
         case Command.EXIT:
             console.log("Bye!");
             process.exit(0);
@@ -28,6 +35,7 @@ export const exec = (stmt: Statement) => {
         case Command.AUTH:
             break;
         case Command.INFO:
+            info(stmt);
             break;
         case Command.GETUSER:
             break;

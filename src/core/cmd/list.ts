@@ -11,7 +11,7 @@ export const list = (stmt: Statement) => {
         error(ErrorType.WRONG_ARGS, stmt);
         return;
     }
-    const obj = yaml.parse(code);
+    const obj = yaml.parse(code) || {};
     Object.keys(obj).map((key) => {
         console.log(`  ${key} : "${obj[key]}"`);
     });
